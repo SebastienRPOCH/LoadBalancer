@@ -47,6 +47,8 @@ RUN set -x \
 	\
 	&& apt-get purge -y --auto-remove $buildDeps
 
+COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+	
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]

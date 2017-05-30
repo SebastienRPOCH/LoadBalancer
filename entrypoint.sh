@@ -1,3 +1,3 @@
-route delete default
+route del default
 route add default gw 172.10.10.3 eth0
 /bin/sh

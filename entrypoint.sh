@@ -1,3 +1,4 @@
 route del default
-route add default gw 172.10.10.3 eth0
+ifconfig eth0 172.10.10.11
+route add default gw 172.10.10.10 eth0
 /bin/sh

@@ -10,6 +10,8 @@ RUN apt-get install -y sudo
 
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 COPY entrypoint.sh /entrypoint.sh
+RUN dos2unix /entrypoint.sh
+RUN chmod 744 /entrypoint.sh
 
 EXPOSE 27070
 
